@@ -286,7 +286,7 @@ class client():
          if self._open_serv and del_object:
             self._open_serv.release_client(self._open_self)
 
-   def iread(self, tags=None, group=None, size=None, pause=0, source='hybrid', update=-1, timeout=5000, sync=False, include_error=False, rebuild=False):
+   def iread(self, tags=None, group=None, size=None, pause=0, source='hybrid', update=-1, timeout=5000, sync=True, include_error=False, rebuild=False):
       """Iterable version of read()"""
 
       def add_items(tags):
