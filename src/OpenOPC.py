@@ -602,7 +602,7 @@ class client():
          error_msg = 'read: %s' % self._get_error_str(err)
          raise OPCError(error_msg)
 
-   def read(self, tags=None, group=None, size=None, pause=0, source='hybrid', update=-1, timeout=5000, sync=False, include_error=False, rebuild=False):
+   def read(self, tags=None, group=None, size=None, pause=0, source='hybrid', update=-1, timeout=5000, sync=True, include_error=False, rebuild=False):
       """Return list of (value, quality, time) tuples for the specified tag(s)"""
 
       tags_list, single, valid = type_check(tags)
